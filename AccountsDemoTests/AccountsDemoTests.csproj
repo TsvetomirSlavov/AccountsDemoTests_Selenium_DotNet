@@ -59,6 +59,7 @@
   <ItemGroup>
     <Compile Include="ClientTests.cs" />
     <Compile Include="Common\DriverProvider.cs" />
+    <Compile Include="Pages\SignInPage.cs" />
     <Compile Include="TestBase.cs" />
     <Compile Include="LogoutTests.cs" />
     <Compile Include="NUnitConsoleRunner.cs" />

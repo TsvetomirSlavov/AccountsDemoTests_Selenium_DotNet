@@ -11,7 +11,7 @@ namespace AccountsDemoTests
         public void UserCanCreateClientOnlyWithMandatoryFieldsSuccessfully()
         {
             driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
-            Login("account1@ad.com", "password");
+            SignInPage.SignIn("account1@ad.com", "password");
 
             String uniqueTime = DateTime.Now.ToString("ddMMyyhhmmssffff");
             String companyName = String.Format("DemoCompany {0}", uniqueTime);
@@ -28,7 +28,7 @@ namespace AccountsDemoTests
         public void UserCanCreateClientWithAddressSuccessfully()
         {
             driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
-            Login("account1@ad.com", "password");
+            SignInPage.SignIn("account1@ad.com", "password");
 
             String uniqueTime = DateTime.Now.ToString("ddMMyyhhmmssffff");
             String companyName = String.Format("DemoCompany {0}", uniqueTime);
