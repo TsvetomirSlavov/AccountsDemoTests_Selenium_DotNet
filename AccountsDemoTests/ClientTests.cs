@@ -1,8 +1,6 @@
 ﻿using System;
 using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
 
 namespace AccountsDemoTests
 {

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Remote;
+using AccountsDemoTests.Common;
 
 namespace AccountsDemoTests
 {
@@ -19,6 +19,7 @@ namespace AccountsDemoTests
 
             driver = new ChromeDriver(options);
             driver.Manage().Window.Maximize();
+            DriverProvider.Driver = driver;
         }
 
         [TearDown]
