@@ -1,7 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 
-namespace AccountsDemoTests
+namespace AccountsDemoTests.Tests
 {
     [TestFixture]
     public class LogoutTests : TestBase

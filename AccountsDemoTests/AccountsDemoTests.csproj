@@ -57,13 +57,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientTests.cs" />
+    <Compile Include="Tests\ClientTests.cs" />
     <Compile Include="Common\DriverProvider.cs" />
+    <Compile Include="Pages\AddNewClientPage.cs" />
     <Compile Include="Pages\SignInPage.cs" />
-    <Compile Include="TestBase.cs" />
-    <Compile Include="LogoutTests.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+    <Compile Include="Tests\LogoutTests.cs" />
     <Compile Include="NUnitConsoleRunner.cs" />
-    <Compile Include="LoginTests.cs" />
+    <Compile Include="Tests\LoginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 
-namespace AccountsDemoTests
+namespace AccountsDemoTests.Tests
 {
     [TestFixture]
     public class ClientTests : TestBase
@@ -17,7 +17,7 @@ namespace AccountsDemoTests
             String companyName = String.Format("DemoCompany {0}", uniqueTime);
             String contactPersonName = String.Format("Contact Person {0}", uniqueTime);
 
-            AddNewClient(companyName, contactPersonName);
+            AddNewClientPage.AddNewClient(companyName, contactPersonName);
 
             Assert.AreEqual(string.Format("DemoCompany {0}", uniqueTime), 
                                 driver.FindElement(By.CssSelector("div.header>h1")).Text,
@@ -35,7 +35,7 @@ namespace AccountsDemoTests
             String contactPersonName = String.Format("Contact Person {0}", uniqueTime);
             String address = String.Format("Client Full Address {0}", uniqueTime);
 
-            AddNewClient(companyName, contactPersonName, address);
+            AddNewClientPage.AddNewClient(companyName, contactPersonName, address);
             Assert.AreEqual(string.Format("DemoCompany {0}", uniqueTime),
                                 driver.FindElement(By.CssSelector("div.header>h1")).Text,
                     "Company name did not match");
