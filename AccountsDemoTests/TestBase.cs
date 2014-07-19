@@ -34,5 +34,24 @@ namespace AccountsDemoTests
             driver.FindElement(By.Name("commit")).Click();
         }
 
+        protected void AddNewClient(String companyName, String contactPersonName, String address = "")
+        {
+            IWebElement clientsLink = driver.FindElement(By.CssSelector("nav.navbar"))
+                                        .FindElement(By.LinkText("CLIENTS"));
+            clientsLink.Click();
+
+            driver.FindElement(By.LinkText("+ Add New Client")).Click();
+
+            driver.FindElement(By.Id("client_company_name")).SendKeys(companyName);
+            driver.FindElement(By.Id("client_contact_person_name")).SendKeys(contactPersonName);
+
+            if (address != "")
+                driver.FindElement(By.Id("client_address")).SendKeys(address);
+
+            driver.FindElement(By.Name("commit")).Click();
+
+        }
+
+
     }
 }
