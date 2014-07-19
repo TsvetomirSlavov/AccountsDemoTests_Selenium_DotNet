@@ -57,8 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogoutTests.cs" />
     <Compile Include="NUnitConsoleRunner.cs" />
-    <Compile Include="LoginTest.cs" />
+    <Compile Include="LoginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
