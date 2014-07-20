@@ -57,6 +57,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Client.cs" />
     <Compile Include="Tests\ClientTests.cs" />
     <Compile Include="Common\DriverProvider.cs" />
     <Compile Include="Pages\AddNewClientPage.cs" />
