@@ -2,6 +2,7 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using AccountsDemoTests.Entities;
+using AccountsDemoTests.Common;
 
 namespace AccountsDemoTests.Tests
 {
@@ -21,7 +22,7 @@ namespace AccountsDemoTests.Tests
 
             AddNewClientPage.AddNewClient(client);
 
-            Assert.AreEqual(string.Format("DemoCompany {0}", uniqueTime), 
+            Verify.AreEqual(string.Format("DemoCompany {0}", uniqueTime), 
                                 driver.FindElement(By.CssSelector("div.header>h1")).Text,
                     "Company name did not match");
         }
@@ -41,7 +42,7 @@ namespace AccountsDemoTests.Tests
 
             AddNewClientPage.AddNewClient(client);
 
-            Assert.AreEqual(string.Format("DemoCompany {0}", uniqueTime),
+            Verify.AreEqual(string.Format("DemoCompany {0}", uniqueTime),
                                 driver.FindElement(By.CssSelector("div.header>h1")).Text,
                     "Company name did not match");
         }

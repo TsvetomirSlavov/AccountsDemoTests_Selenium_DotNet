@@ -57,6 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\TestEnvironment.cs" />
+    <Compile Include="Common\TestFailure.cs" />
+    <Compile Include="Common\Verify.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Tests\ClientTests.cs" />
     <Compile Include="Common\DriverProvider.cs" />

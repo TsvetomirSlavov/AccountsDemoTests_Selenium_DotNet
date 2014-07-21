@@ -27,11 +27,23 @@ namespace AccountsDemoTests.Tests
 
             SignInPage = SignInPage ?? SignInPage.Instance;
             AddNewClientPage = AddNewClientPage ?? AddNewClientPage.Instance;
+
+            TestFailure.ClearFailures();
+
         }
 
         [TearDown]
         protected void TearDown()
         {
+            // If test has failed due to an unhandled exception
+            if (TestEnvironment.TestStatus.Equals(TestStatus.Failed))
+            {
+                TestFailure.CaptureScreenShot(TestEnvironment.ScreenShotPath + "UnExpectedFailure.png");
+                TestFailure.CapturePageSource(TestEnvironment.FileDumpPath + "UnExpectedFailure.html");
+            }
+
+            // If test has failed due to assertion failures
+            TestFailure.LogFailureMessagesAndFail();
             driver.Quit();
         }
     }
