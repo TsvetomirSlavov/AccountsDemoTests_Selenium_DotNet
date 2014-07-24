@@ -17,8 +17,8 @@ namespace AccountsDemoTests.Tests
             String contactPersonName = String.Format("Contact Person {0}", uniqueTime);
             Client client = new Client(companyName, contactPersonName);
 
-            driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
-            SignInPage.SignIn("account1@ad.com", "password");
+            driver.Navigate().GoToUrl(Constants.APPLICATION_URL);
+            SignInPage.SignIn(Constants.USER_EMAIL, Constants.USER_PASSWORD);
 
             AddNewClientPage.AddNewClient(client);
 
@@ -30,8 +30,8 @@ namespace AccountsDemoTests.Tests
         [Test]
         public void UserCanCreateClientWithAddressSuccessfully()
         {
-            driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
-            SignInPage.SignIn("account1@ad.com", "password");
+            driver.Navigate().GoToUrl(Constants.APPLICATION_URL);
+            SignInPage.SignIn(Constants.USER_EMAIL, Constants.USER_PASSWORD);
 
             String uniqueTime = DateTime.Now.ToString("ddMMyyhhmmssffff");
             String companyName = String.Format("DemoCompany {0}", uniqueTime);

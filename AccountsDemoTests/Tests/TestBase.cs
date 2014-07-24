@@ -18,12 +18,7 @@ namespace AccountsDemoTests.Tests
         [SetUp]
         protected void SetUp()
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("test-type");
-
-            driver = new ChromeDriver(options);
-            driver.Manage().Window.Maximize();
-            DriverProvider.Driver = driver;
+            driver = new DriverInitializer().Initialize();
 
             SignInPage = SignInPage ?? SignInPage.Instance;
             AddNewClientPage = AddNewClientPage ?? AddNewClientPage.Instance;

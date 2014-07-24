@@ -10,7 +10,7 @@ namespace AccountsDemoTests.Tests
         [Test]
         public void UserCanLoginSuccessfully()
         {
-            driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
+            driver.Navigate().GoToUrl(Constants.APPLICATION_URL);
             SignInPage.SignIn("account1@ad.com", "password");
 
             Verify.True(driver.FindElement(By.CssSelector(".header>div>h2")).Text.StartsWith("Harry"),
@@ -20,10 +20,10 @@ namespace AccountsDemoTests.Tests
         [Test]
         public void UserShouldBeForcedToLoginWhenAccessesAuthenticatedPages()
         {
-            driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/clients");
+            driver.Navigate().GoToUrl(string.Format("{0}/clients", Constants.APPLICATION_URL));
             SignInPage.SignIn("account1@ad.com", "password");
             
-            Verify.AreEqual("http://accountsdemo.herokuapp.com/clients", driver.Url.ToString(),
+            Verify.AreEqual(string.Format("{0}/clients", Constants.APPLICATION_URL), driver.Url.ToString(),
                 "User should have been landed in Clients Page");
         }
     }

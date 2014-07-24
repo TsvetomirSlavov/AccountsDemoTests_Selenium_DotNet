@@ -89,3 +89,15 @@ Chapter11: Introducing Entities
 
 Creating Client Entity to manage test data readable and managable 
 
+
+Chapter12: Handling Assertion failures and exceptions
+---------------------------------------------
+
+Easing maintenance. Capturing screenshots, html source when test fails due to exceptions and/or assertion failures 
+
+
+Chapter13: Externalize test configuration
+---------------------------------------------
+
+Externalizing configuration details
+

@@ -10,8 +10,8 @@ namespace AccountsDemoTests.Tests
         [Test]
         public void UserCanLogoutSuccessfully()
         {
-            driver.Navigate().GoToUrl("http://accountsdemo.herokuapp.com/");
-            SignInPage.SignIn("account1@ad.com", "password");
+            driver.Navigate().GoToUrl(Constants.APPLICATION_URL);
+            SignInPage.SignIn(Constants.USER_EMAIL, Constants.USER_PASSWORD);
 
             Verify.True(driver.FindElement(By.CssSelector(".header>div>h2")).Text.StartsWith("Harry"),
                 "Signed in User name did not match", true);
