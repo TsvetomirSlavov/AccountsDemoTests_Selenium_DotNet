@@ -4,7 +4,7 @@ Evolving Functional Test Framework (Selenium & .Net)
 The objective of this repository is to demonstrate the evolution of functional test automation framework.
 Each commit in the repository represents a change leading towards evolution
 
-Steps to get the tests running on local machine.
+Please follow the Steps below to get the tests running on your local machine:
 
 Pre-Requisites:
 ------------------
